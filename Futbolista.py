@@ -21,8 +21,8 @@ class Futbolista (Deportista):
         def setPiernaHabil(self,piernaHabil):
             self._piernaHabil=piernaHabil
     def __str__(self):
-        return f"Mi nombre es {self.getNombre()} soy profesional en el deporte {self.getDeporte()} Tengo {self.getEdad()} años de edad y llevo {self.getAñosPracticando()} años en el deporte"
-    
+        cadena = "Mi nombre es {} soy profesional en el deporte {} Tengo {} años de edad y llevo {} años en el deporte".format(self.getNombre(), self.getDeporte(), str(self.getEdad()), str(self.getAñosPracticando()))
+        return cadena
 
         
 
