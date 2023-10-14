@@ -1,6 +1,6 @@
 from persona import Persona
 class Deportista(Persona):
-    def __init__(self,deporte,añospracticando):
+    def __init__(self,nombre,edad,altura,sexo,deporte,añospracticando):
         super().__init__(nombre, edad, altura, sexo)
         self._deporte=deporte
         self._añospracticando=añospracticando
