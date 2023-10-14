@@ -1,46 +1,8 @@
-class Persona:
-    def __init__(self,nombre,edad,altura,sexo):
-        self._nombre=nombre
-        self._edad=edad
-        self._altura=altura
-        self._sexo=sexo
-
-    def getNombre(self):
-        return self._nombre
-    def setNombre(self,nombre):
-        self._nombre=nombre
-    def getEdad(self):
-        return self._edad
-    def setEdad(self,edad):
-        self._edad=edad
-    def getAltura(self):
-        return self._altura
-    def setAltura(self,altura):
-        self._altura=altura
-    def getSexo(self):
-        return self._sexo
-    def setSexo(self,sexo):
-        self._sexo=sexo
-
-class Deportista:
-    def __init__(self,deporte,añospracticando):
-        self._deporte=deporte
-        self._añospracticando=añospracticando
-    def getDeporte(self):
-        return self._deporte
-    def setDeporte(self,deporte):
-        self._deporte=deporte
-    def getAñosPracticando(self):
-        return self._añospracticando
-    def setAñosPracticando(self,añospracticando):
-        self._añospracticando=añospracticando
-
-    
-class Futbolista (Persona,Deportista):
+from deportista import Deportista
+class Futbolista (Deportista):
     listaFutbolista=[]
-    def __init__(self,nombre,edad,altura,sexo,deporte,añospracticando,golesMarcados,tarjetasRojas,piernaHabil):
-        Persona.__init__(nombre,edad,altura,sexo)
-        Deportista.__init__(self,deporte,añospracticando)
+    def __init__(self,nombre,edad,altura,sexo,añospracticando,golesMarcados,tarjetasRojas,piernaHabil):
+        super().__init__(nombre, edad, altura, sexo, "Futbol", añospracticando)
         self._golesMarcados=golesMarcados
         self._tarjetasRojas=tarjetasRojas
         self._piernaHabil=piernaHabil
